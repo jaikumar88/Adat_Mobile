@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/transList"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Trans List" />
+        <item
+            android:id="@+id/add_trans"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Add Trans" />
+        <item
+            android:id="@+id/add_activity"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Add Activity" />
+        <item
+            android:id="@+id/add_cust"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Add Customer" />
+        <item
+            android:id="@+id/add_loc"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Add Location" />
+        <item
+            android:id="@+id/add_product"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Add Product" />
+        <item
+            android:id="@+id/advance"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Advance" />
+    </group>
+
+    <item android:title="Report">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

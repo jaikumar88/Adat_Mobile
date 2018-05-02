@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:overScrollMode="ifContentScrolls"
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbars="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="app.sps.com.adat.AddTransActivity"
+    tools:showIn="@layout/activity_add_trans">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/formulae" >
+    <Spinner
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/customer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/location" />
+
+    <Spinner
+        android:id="@+id/shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/customer" />
+
+    <Spinner
+        android:id="@+id/productType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/shop" />
+
+            <TextView
+                android:id="@+id/lweight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/weight"
+                android:layout_alignBottom="@+id/weight"
+                android:layout_alignLeft="@+id/lrate"
+                android:layout_alignStart="@+id/lrate"
+                android:text="Weight" />
+
+            <EditText
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/rate"
+                android:layout_alignStart="@+id/rate"
+                android:layout_below="@+id/transDate"
+                android:hint="0.00"
+                android:inputType="textEmailAddress"
+                android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/lrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rate"
+        android:layout_alignBottom="@+id/rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:text="Rate" />
+
+    <EditText
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/weight"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:hint="00.00"
+        android:inputType="text"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/totalDue"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
+        android:text="Save"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_save"
+        android:background="@color/colorPrimary"
+        android:text="Cancel"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lrate"
+        android:layout_alignStart="@+id/lrate"
+        android:layout_below="@+id/rate"
+        android:layout_marginTop="11dp"
+        android:text="Quantity" />
+
+    <EditText
+        android:id="@+id/noOfItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rate"
+        android:layout_alignStart="@+id/rate"
+        android:layout_below="@+id/lrate"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/totalamt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="12dp"
+        android:text="Total" />
+
+    <EditText
+        android:id="@+id/totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/totalamt"
+        android:layout_alignLeft="@+id/noOfItem"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/noOfItem"
+        android:layout_alignTop="@+id/textView2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/kharcha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_below="@+id/totalamt"
+        android:layout_marginTop="15dp"
+        android:text="Kharcha" />
+
+    <EditText
+        android:id="@+id/expensePer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/kharcha"
+        android:layout_alignEnd="@+id/totalAmount"
+        android:layout_alignLeft="@+id/totalAmount"
+        android:layout_alignRight="@+id/totalAmount"
+        android:layout_alignStart="@+id/totalAmount"
+        android:layout_alignTop="@+id/totalamt"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/kharcha"
+        android:layout_alignStart="@+id/kharcha"
+        android:layout_below="@+id/kharcha"
+        android:layout_marginTop="12dp"
+        android:text="Other Kharcha" />
+
+    <EditText
+        android:id="@+id/otherExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/expensePer"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/expensePer"
+        android:layout_alignTop="@+id/kharcha"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="16dp"
+        android:text="Nagad %" />
+
+    <EditText
+        android:id="@+id/deduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignLeft="@+id/otherExp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/otherExp"
+        android:layout_alignTop="@+id/textView5"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="14dp"
+        android:text="Total Kharcha" />
+
+    <EditText
+        android:id="@+id/totalExpenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_alignLeft="@+id/deduction"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/deduction"
+        android:layout_alignTop="@+id/textView6"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/totalDue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/totalamt"
+        android:layout_alignStart="@+id/totalamt"
+        android:layout_below="@+id/textView7"
+        android:layout_marginTop="33dp"
+        android:text="Total Due" />
+
+    <EditText
+        android:id="@+id/totalDueAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/totalDue"
+        android:layout_alignLeft="@+id/totalExpenses"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/totalExpenses"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/lweight"
+                android:layout_alignStart="@+id/lweight"
+                android:layout_below="@+id/productType"
+                android:layout_marginTop="19dp"
+                android:text="Trans Date" />
+
+            <EditText
+                android:id="@+id/transDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/weight"
+                android:layout_alignStart="@+id/weight"
+                android:layout_below="@+id/productType"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
