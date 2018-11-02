@@ -5,7 +5,7 @@ package app.sps.com.adat;
  */
 
 public interface AppUtil {
-    public  String host = "http://adatapp-adatapp.a3c1.starter-us-west-1.openshiftapps.com/StoreManagement/";
+    public  String host = "http://taxipro-taxi-proj.a3c1.starter-us-west-1.openshiftapps.com/TaxiManagement/";
     //public  String host = "http://192.168.43.63:8080/StoreManagement/";
     public  String transListUrl = host+"mTransList";
     public  String loginUrl = host+"mLogin";

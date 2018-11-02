@@ -4,6 +4,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,9 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="app.sps.com.adat.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,39 +26,42 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="app.sps.com.adat.TransListActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
-            android:name="app.sps.com.adat.AddTransActivity"
+            android:name=".TransListActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".AddTransActivity"
             android:label="@string/title_activity_add_trans"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="app.sps.com.adat.NewCustomerActivity"
+            android:name=".NewCustomerActivity"
             android:label="@string/title_activity_new_customer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="app.sps.com.adat.NewLocationActivity"
+            android:name=".NewLocationActivity"
             android:label="@string/title_activity_new_location"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="app.sps.com.adat.TransactionListActivity"
+            android:name=".TransactionListActivity"
             android:label="@string/title_activity_transaction_list"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="app.sps.com.adat.NewProductActivity"
+            android:name=".NewProductActivity"
             android:label="@string/title_activity_new_product"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="app.sps.com.adat.NewActivity"
+            android:name=".NewActivity"
             android:label="@string/title_activity_new"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 
 </manifest>
